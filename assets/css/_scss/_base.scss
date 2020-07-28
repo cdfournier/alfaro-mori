@@ -1,0 +1,35 @@
+@import "mixins";
+@import "fonts";
+
+// BASE
+html {
+  margin: 0 auto;
+  padding: 0;
+  @include font-sans-regular;
+  font-size: 16px;
+  line-height: 1.65;
+  color: black;
+  scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+	html {scroll-behavior: auto;}
+}
+
+body, .body {
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  margin: 0;
+}

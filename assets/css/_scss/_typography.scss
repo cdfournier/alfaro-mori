@@ -1,0 +1,89 @@
+// TYPOGRAPHY
+/* 
+  NOTES:  
+  All typography is set to a 1.250 Major-Third type-scale
+*/
+
+h1, h2, h3, h4, h5, p {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+}
+
+h1, h2, h3, h4, h5 {
+  @include font-serif-regular;
+  line-height: 1.125;
+}
+
+h1 {font-size: 3.502rem;}
+h2 {font-size: 2.441rem;}
+h3 {font-size: 1.953rem;}
+h4 {font-size: 1.563rem;}
+h5 {font-size: 1.25rem;}
+
+p {
+  max-width: 40rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  font-size: 1rem;
+}
+
+small {font-size: 0.8rem;}
+
+
+// CUSTOM SPACING
+h2 + h3,
+h1 + p, h2 + p, h3 + p, h4 + p, h5 + p,
+h1 + ul, h2 + ul, h3 + ul, h4 + ul, h5 + ul,
+h1 + ol, h2 + ol, h3 + ol, h4 + ol, h5 + ol {margin: 0.5rem 0 0;}
+
+p + h1, p + h2, p + h3, p + h4, p + h5,
+ul + h1, ul + h2, ul + h3, ul + h4, ul + h5,
+ol + h1, ol + h2, ol + h3, ol + h4, ol + h5,
+dl + h1, dl + h2, dl + h3, dl + h4, dl + h5 {margin: 1rem 0 0;}
+
+
+// LISTS
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li {
+    margin: 1rem 0 0;
+  }
+}
+
+ol {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  counter-reset: count;
+  li {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    margin: 1rem 0;
+    font-size: 1.25rem;
+    span {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      width: auto;
+      margin: 0;
+      line-height: 1;
+    }
+    span::before {
+      flex: 0 1 auto;
+      counter-increment: count;
+      content: "0" counter(count);
+    }
+  }
+  li:first-of-type {margin: 0 0 1rem;}
+}
+
+
+// VISUALLY HIDDEN
+.visuallyhidden {display: none;}

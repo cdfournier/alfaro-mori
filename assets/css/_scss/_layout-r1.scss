@@ -1,0 +1,157 @@
+// BANNERS
+.banner {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: inherit;
+  min-height: calc(100vh - 2rem);
+  overflow: hidden;
+  margin: 0;
+  padding: 2rem;
+  color: white;
+  background-attachment: inherit;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .overlay {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.5;
+    -webkit-backdrop-filter: saturate(180%);
+    backdrop-filter: saturate(180%);
+  }
+  .logo {
+    display: grid;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    svg {
+      max-width: 20rem;
+      margin: 0 auto;
+      fill: white;
+    }
+  }
+  h1, h2, h3, h4, h5, p {position: relative;}
+}
+
+
+// PARALLAX
+.lax {will-change: transform;}
+
+
+// PROJECT LIST
+.project-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  .project {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 1rem 0 0;
+    padding: 1rem;
+    padding-top: 83.385%;
+    background-attachment: inherit;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .overlay {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      background: linear-gradient(transparent 60%, black 110%);
+      opacity: 0.9;
+      -webkit-backdrop-filter: saturate(180%);
+      backdrop-filter: saturate(180%);
+    }
+    p {
+      display: flex;
+      align-items: center;
+      z-index: 10;
+      max-width: none;
+      margin: 0;
+      @include font-serif-regular;
+      font-size: 1.953rem;
+      line-height: initial;
+      text-decoration: none;
+      color: white;
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      span {
+        display: flex;
+        display: none;
+        padding: 0 0 0 0.5rem;
+        @include transition(all, 0.325s, ease);
+        svg {fill: white;}
+      }
+    }
+  }
+}
+
+@media (min-width: 35rem) {
+  .project-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .project {
+      width: calc(50% - 0.5rem);
+      padding-top: 41.35%;
+    }
+  }
+}
+
+@media (min-width: 50rem) {
+  .project-list {
+    .project {
+      width: calc(33% - 0.5rem);
+      padding-top: 24.325%;
+    }
+  }
+}
+
+
+/* PROJECT GRID */
+.project-grid {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  img {
+    display: grid;
+    width: 100%;
+    overflow: hidden;
+    margin: 1rem 0 0;
+  }
+}
+
+@media (min-width: 35rem) {
+  .project-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    img {width: calc(50% - 0.5rem);}
+    img.lg {width: 100%;}
+  }
+}
