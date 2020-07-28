@@ -63,16 +63,21 @@ footer {
     align-items: flex-end;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
     text-align: right;
     .logo {
-      width: 50%;
+      width: auto;
       margin: 0;
       a {display: grid;}
-      svg {margin: 0;}
+      svg {
+        width: 100%;
+        margin: 0;
+      }
       a:hover svg, a:focus svg {fill: gray;}
     }
     nav {
-      width: 50%;
+      width: auto;
+      margin: 0;
       ul {
         justify-content: flex-end;
         width: 100%;

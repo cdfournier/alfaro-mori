@@ -400,18 +400,21 @@ footer {
     align-items: flex-end;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
     text-align: right; }
     footer .logo {
-      width: 50%;
+      width: auto;
       margin: 0; }
       footer .logo a {
         display: grid; }
       footer .logo svg {
+        width: 100%;
         margin: 0; }
       footer .logo a:hover svg, footer .logo a:focus svg {
         fill: gray; }
     footer nav {
-      width: 50%; }
+      width: auto;
+      margin: 0; }
       footer nav ul {
         justify-content: flex-end;
         width: 100%; }
