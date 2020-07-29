@@ -202,7 +202,10 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    img {width: calc(50% - 0.5rem);}
+    img {
+      width: calc(50% - 0.5rem);
+      height: 100%;
+    }
     img.lg {width: 100%;}
   }
 }

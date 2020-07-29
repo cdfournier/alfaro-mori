@@ -333,7 +333,8 @@ ol {
     flex-wrap: wrap;
     justify-content: space-between; }
     .project-grid img {
-      width: calc(50% - 0.5rem); }
+      width: calc(50% - 0.5rem);
+      height: 100%; }
     .project-grid img.lg {
       width: 100%; } }
 
