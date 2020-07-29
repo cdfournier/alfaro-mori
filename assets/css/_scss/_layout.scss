@@ -92,7 +92,6 @@
   margin: 0;
   .project {
     display: flex;
-    align-items: flex-end;
     position: relative;
     width: 100%;
     overflow: hidden;
@@ -105,9 +104,6 @@
       height: 100%;
       text-decoration: none;
       .preview {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
         img {
           display: grid;
           position: absolute;
@@ -131,7 +127,8 @@
           backdrop-filter: saturate(180%);
         }
         p {
-          position: relative;
+          position: absolute;
+          bottom: 0;
           width: 100%;
           padding: 1rem;
           max-width: none;
